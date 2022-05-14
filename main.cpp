@@ -11,7 +11,7 @@ struct MinHeapNode {
     MinHeapNode *Left, *Right;
 };
 
-class MinHeap { //creez un min-heap de arbori
+class MinHeap {
     private:
         int size;
         const int capacity = 10000;
@@ -164,7 +164,7 @@ class HuffmanTree {
             Root = Heap.MIN();
             CreateCodes();
         }
-        string DecodeMessage(string encoded_message) // parcurg arborele pentru a decodifica mesajul
+        string DecodeMessage(string encoded_message)
         {
             string message = "";
             MinHeapNode *pointer = Root;
@@ -180,7 +180,7 @@ class HuffmanTree {
             }
             return message;
         }
-        string EncodeMessage(string message) //creez un vector de 256 de elemente in care stochez codul fiecarui caracter din cele date
+        string EncodeMessage(string message)
         {
             string encoded_message = "";
             int n = message.length();
@@ -192,15 +192,6 @@ class HuffmanTree {
 
 int main()
 {
-    // Se introduce alfabetul cu poderile in fisierul input.in, unde datele vor fi date dupa acest exemplu:
-    // e 56
-    // a 43
-    // r 38
-    // i 38
-    // o 36
-    // u 18
-    // y 9
-    // x 1
     char c;
     string s;
     int x, n = 0;
